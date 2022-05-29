@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+
+.todo_filter {
+    text-align: center;
+    margin: $margin-base * 4 0;
+    .button_group {
+        display: flex;
+        justify-content: space-between;
+        button {
+            width: 30%;
+            @include button_default;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+@import '../../../styles/variables';
+
+$input_height: 38px;
+
+.add_new_container {
+    text-align: center;
+    .content {
+        border: 1px solid #ccc;
+        padding: $margin-base * 4;
+        border-radius: $border-radius;
+
+        .add_btn {
+            width: 100%;
+            margin-top: $margin-base * 4;
+            @include button_default;
+        }
+    }
+    .input {
+        display: flex;
+        align-items: center;
+        height: $input_height;
+
+        &_icon,
+        input {
+            height: 100%;
+        }
+
+        &_icon {
+            background-color: $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            border-radius: $border-radius 0 0 $border-radius;
+
+            svg {
+                font-size: 24px;
+                color: $white;
+            }
+        }
+
+        input {
+            border-radius: 0 $border-radius $border-radius 0;
+        }
+    }
+
+    .select {
+        min-width: 120px;
+        > div {
+            text-align: left;
+            padding-top: 2px !important;
+            height: $input_height !important;
+        }
+    }
+}

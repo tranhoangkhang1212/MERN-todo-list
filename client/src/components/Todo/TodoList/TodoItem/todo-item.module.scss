@@ -1,0 +1,83 @@
+@import '../../../../styles/variables';
+
+.todo_list_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(213, 213, 213);
+    padding: $padding-base * 2 $padding-base * 4;
+    border-radius: $border-radius;
+    margin-bottom: $margin-base * 4;
+    height: 50px;
+
+    h3 {
+        text-align: left;
+    }
+
+    .actions {
+        width: 150px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .date {
+            position: absolute;
+            right: 110%;
+            font-weight: 500;
+            color: #ccc;
+        }
+
+        &_btn {
+            min-width: 60px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            svg {
+                margin-left: $margin-base * 2;
+            }
+        }
+    }
+
+    svg {
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .pen {
+        color: rgb(78, 179, 0);
+    }
+
+    .recycle {
+        color: red;
+    }
+
+    .update_todo {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            @include button_default;
+        }
+    }
+}
+.disable {
+    &::before {
+        position: absolute;
+        content: '';
+        width: 82%;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.462);
+        z-index: 999;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        width: 94%;
+        height: 2px;
+        background-color: red;
+    }
+}

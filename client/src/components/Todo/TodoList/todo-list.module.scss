@@ -1,0 +1,26 @@
+@import '../../../styles/variables';
+
+.todo_list {
+    margin-top: $margin-base * 2;
+    padding: $padding-base * 2 0;
+    overflow-x: hidden;
+    text-align: center;
+
+    .content {
+        margin-top: $margin-base * 4;
+        max-height: 330px;
+        overflow-y: scroll;
+        /* width */
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: $primary-color;
+            border-radius: $border-radius;
+            box-shadow: 0;
+            border: none;
+        }
+    }
+}
