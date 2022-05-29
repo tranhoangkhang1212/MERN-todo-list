@@ -1,0 +1,1 @@
+![[An old rock in the desert](/assets/images/shiprock.jpg "Shiprock, New Mexico by Beau Rogers")](https://i.morioh.com/200630/7055e259.jpg)
